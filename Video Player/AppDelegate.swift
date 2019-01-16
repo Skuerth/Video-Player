@@ -15,12 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        let viewConroller = ViewController()
+        viewConroller.view.backgroundColor = UIColor(red: 8.0 / 255.0, green: 21.0 / 255.0, blue: 35.0 / 255.0, alpha: 1)
+
+        window!.rootViewController = viewConroller
+        window?.makeKeyAndVisible()
+
         return true
-    }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
     }
 }
